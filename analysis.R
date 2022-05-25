@@ -4,13 +4,13 @@ library("ggplot2")
 library("usmap")
 
 
-incarceration_df <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
+#incarceration_df <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
 
 
 
 #Chart 1 
 
-prison_pop <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv", stringsAsFactors = FALSE)
+#prison_pop <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv", stringsAsFactors = FALSE)
 
 prison_pop_ca <- prison_pop %>%
   filter(state == "CA")
@@ -62,10 +62,9 @@ print(scatterplot)
 us_pop_2018 <- incarceration_df %>%
   filter(year == '2018') %>%
   group_by(state) %>%
-  summarize(total_state_pop = sum(total_pop))
-
+  summarize(total_prison_pop = sum(total_jail_pop, na.rm = TRUE))
 us_map <- plot_usmap(data = us_pop_2018,
-                     values = 'total_state_pop',
+                     values = 'total_prison_pop',
                      color = 'black') +
   scale_fill_continuous(low = 'white', high = 'red')
   labs(
