@@ -77,7 +77,6 @@ print(us_map)
 
 #Introduction Values
 
-black_incarc_rate <- mean(incacertation_df$black_jail_pop, na.rm = TRUE) / mean(incacertation_df$total_jail_pop, na.rm = TRUE)
-
+black_incarc_rate <- mean(incarceration_df$black_jail_pop, na.rm = TRUE) / mean(incarceration_df$total_jail_pop, na.rm = TRUE)
 summary_info <- list()
-summary_info$black_incar_rate <- mean(incacertation_df$black_jail_pop, na.rm = TRUE) / mean(incacertation_df$total_jail_pop, na.rm = TRUE)
+summary_info$black_incar_rate <- mean(incarceration_df$black_jail_pop, na.rm = TRUE) / mean(incarceration_df$total_jail_pop, na.rm = TRUE)
