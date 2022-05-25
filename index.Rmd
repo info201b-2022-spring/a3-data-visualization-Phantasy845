@@ -1,0 +1,49 @@
+---
+title: "US Incareration Analysis"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+library("knitr")
+library("dplyr")
+library("ggplot2")
+library("usmap")
+```
+
+## Introduction
+
+Within this project, I've decided to look at the general state of incarceration within the United States, taking an
+astute focus within the African American populations as well as a deep dive into Santa Clara County, California.
+The reason why I've chosen this region in particular is because this is my home, where I originally came from before
+coming to Seattle. You may also notice I've chosen to only look at the time frame after the year 2000. This is because
+this will more accurately depict patterns of inequality that goes on in the modern time.
+
+## Analysis
+
+Within the entire country, Black Americans make up 50.38% of the total incarceration rate within the United States.
+Within the state of California and within Santa Clara County, the year with the highest black jail population was in 2007. However, within the Santa Clara County the Latinx population actually maintains the highest jail population, but this is mainly due to a much higher latinx population within Santa Clara County. When we look at Southern California, where the population is much more diversified, the black jail population becomes the highest.As a whole though within Santa Clara County, the jail population has decreased over the years, and has begun reaching new lows. 
+
+## Chart 1
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+plot(chart1)
+
+```
+
+## Chart 2
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot(scatterplot)
+
+```
+
+## Chart 3
+
+```{r, echo=FALSE, message=FALSE}
+plot(us_map)
+
+```
