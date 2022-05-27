@@ -4,13 +4,13 @@ library("ggplot2")
 library("usmap")
 
 
-#incarceration_df <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
+incarceration_df <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
 
 
 
-#Chart 1 
+## Chart 1 
 
-#prison_pop <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv", stringsAsFactors = FALSE)
+prison_pop <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv", stringsAsFactors = FALSE)
 
 prison_pop_ca <- prison_pop %>%
   filter(state == "CA")
@@ -44,6 +44,17 @@ ggplotly(chart1)
 print(chart1)
 
 # Chart 2
+
+black_prison_pop_ca <- prison_pop %>%
+  filter(state == "CA")
+
+
+black_prison_pop_ca <- black_prison_pop_ca %>%
+  filter(year >= "2000" & year<= "2016")
+
+black_filtered_data <- black_prison_pop_ca %>%
+  group_by(year, black_jail_pop) %>%
+  summarize(black_jail_pop = sum(black_jail_pop, na.rm = TRUE))
 
 
 scatterplot <- ggplot(filtered_data, aes(x = year, y = black_jail_pop)) +

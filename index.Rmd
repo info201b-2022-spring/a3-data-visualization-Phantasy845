@@ -24,9 +24,11 @@ this will more accurately depict patterns of inequality that goes on in the mode
 ## Analysis
 
 Within the entire country, Black Americans make up 50.38% of the total incarceration rate within the United States.
-Within the state of California and within Santa Clara County, the year with the highest black jail population was in 2007. However, within the Santa Clara County the Latinx population actually maintains the highest jail population, but this is mainly due to a much higher latinx population within Santa Clara County. When we look at Southern California, where the population is much more diversified, the black jail population becomes the highest.As a whole though within Santa Clara County, the jail population has decreased over the years, and has begun reaching new lows. 
+Within the state of California and within Santa Clara County, the year with the highest black jail population was in 2007. The state with the highest RATE of incarceration for black Americans was Utah, while the state with highest population COUNT for incarcerated black Americans was New York, with a count of 24,818.
 
 ## Chart 1
+
+The reason I included this chart is because I thought it would show the different progressions of race within the prisons of Santa Clara County. Despite black incarceration rates being the higest nationwide, Within the Santa Clara County the Latinx population actually maintains the highest jail population, but this is mainly due to a much higher latinx population within Santa Clara County. One interesting note is that as a whole, incarceration populations take a large decrease around 2010. 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
@@ -36,12 +38,16 @@ plot(chart1)
 
 ## Chart 2
 
+For this scatterplot, I wanted to do something  similar to the first chart, but instead take at all of California instead of just one population while also taking a closer look at specifically black prison populations. The main pattern I saw was that, as expect, the population was much higher than the centralized SAnta Clara County.Like the last chart, there was also a strong fall in the population between the years of 2005-2010.
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 plot(scatterplot)
 
 ```
 
 ## Chart 3
+
+For chart 3, I felt the most simplest map to look at would be to look at the total prison population by state. Unsurprisingly, the states with the highest population came out as the states with the highest jail population. What did shock me was definiitely some smaller states suchas North Carolina and Tennessee have numbers that rival even bigger states such as Pennsylvania and New York.
 
 ```{r, echo=FALSE, message=FALSE}
 plot(us_map)
